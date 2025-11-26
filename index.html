@@ -53,12 +53,13 @@
   <section id="introduction">
 
     <h2>Introduction</h2>
-<p>This project uses an <strong>Arduino Uno</strong>, a <strong>DHT11 temperature sensor</strong>, a 
-<strong>buzzer</strong>, <strong>RGB LEDs</strong>, and an <strong>LCD screen</strong> to provide fire alerts. 
-When the temperature reaches a preset range, all alarm systems engage simultaneously: the buzzer sounds to 
-alert those who are not hearing impaired, the RGB LEDs flash to visually warn the hearing impaired, and the 
-LCD screen displays the current temperature along with the message <em>Fire! Exit Now</em>. This ensures 
-comprehensive safety by combining auditory and visual signals.</p>
+    <p>This project uses an <strong>Arduino Uno</strong>, a <strong>DHT11 temperature sensor</strong>, a
+      <strong>buzzer</strong>, <strong>RGB LEDs</strong>, and an <strong>LCD screen</strong> to provide fire alerts.
+      When the temperature reaches a preset range, all alarm systems engage simultaneously: the buzzer sounds to
+      alert those who are not hearing impaired, the RGB LEDs flash to visually warn the hearing impaired, and the
+      LCD screen displays the current temperature along with the message <em>Fire! Exit Now</em>. This ensures
+      comprehensive safety by combining auditory and visual signals.
+    </p>
 
 
     </p>
@@ -86,117 +87,126 @@ comprehensive safety by combining auditory and visual signals.</p>
 
   <section id="bom">
     <h2>Bill of Materials (BoM)</h2>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>BOM</title>
-</head>
-<body>
 
-<table>
+     
+
+      <table>
   <tr>
-    <th>Item</th>
-    <th>Description Qty</th>
+    <th>Item Description</th>
+    <th>Qty</th>
     <th>Specification</th>
+    <th>Estimated Cost(CA)</th>
+    <th>Supplier/Part Number</th>
   </tr>
   <tr>
+    <td>Arduino Uno compatible with</td>
     <td>1</td>
-    <td>Arduino Uno compatible with c</td>
-    <td>1 5v microcontoller board.</td>
+    <td>5v microcontroller board</td>
+    <td>$22.00</td>
+    <td><a href = "https://www.amazon.ca/Elegoo-Board-ATmega328P-ATMEGA16U2-Arduino/dp/B01EWOE0UU/ref=sr_1_3_sspa">A000073</href></td>
   </tr>
   <tr>
-    <td>2</td>
-    <td>Temperature &amp; Humidity Sensor</td>
-    <td>1 Digital temp/humidity sensor,3-5v</td>
+    <td>Temperature & Humidity Sens</td>
+    <td>1</td>
+    <td>Digital temp/humidity sensor, 3-5v</td>
+    <td>$5.00</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/dfrobot/DFR0067/6588511">DHT11</href></td>
   </tr>
   <tr>
-    <td>3</td>
     <td>Resistor for LED</td>
-    <td>1 220 or 330 ohm</td>
+    <td>1</td>
+    <td>220 or 330 ohm</td>
+    <td>$0.16</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/koa-speer-electronics-inc/CF1-4CT52R221J/13538392">CF1/4CT52R221J</href></td>
   </tr>
   <tr>
-    <td>4</td>
     <td>LED RED</td>
-    <td>1-2 5 mm LED .- 2v forward drop</td>
+    <td>1-2</td>
+    <td>5 mm LED - 2v forward drop</td>
+    <td>$0.24</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/w-rth-elektronik/151051RS11000/4490012">151051RS11000</href></td>
   </tr>
   <tr>
-    <td>5</td>
     <td>Breadboard</td>
-    <td>1 400 tiepoints</td>
+    <td>1</td>
+    <td>400 tiepoints</td>
+    <td>$15.56</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/sunfounder/CN0241/18668614">CN0241</href></td>
   </tr>
   <tr>
-    <td>6</td>
     <td>Buzzers</td>
-    <td>2 Small 5v piezo buzzers</td>
+    <td>2</td>
+    <td>Small 5v piezo buzzers</td>
+    <td>$4.58</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/mallory-sonalert-products-inc/PB-0940PW-03Q/21823203">PB-0940PW-03Q</href></td>
   </tr>
   <tr>
-    <td>7</td>
     <td>lcd display</td>
-    <td>1 5v LCD, 12C module</td>
+    <td>1</td>
+    <td>5v LCD, I2C module</td>
+    <td>$11.44</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/olimex-ltd/LCD-DISPLAY-16X2---BL/21662361">LCD DISPLAY 16X2 & BL</href></td>
   </tr>
   <tr>
-    <td>8</td>
+    <td></td>
     <td>8</td>
     <td>20 male to male</td>
+    <td>$7.75</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/busboard-prototype-systems/ZW-MM-20/19200346">ZW-MM-20</href></td>
   </tr>
   <tr>
-    <td>9</td>
     <td>potentiometer</td>
-    <td>1 10k ohm linear pot</td>
+    <td>1</td>
+    <td>10k ohm linear pot</td>
+    <td>$3.00</td>
+    <td>PEC11R-4315F-N0012</td>
   </tr>
   <tr>
-    <td>10</td>
     <td>Plastick box</td>
     <td>1</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Computer</td>
+    <td>---------------------------------------------</td>
+    <td>free</td>
     <td></td>
   </tr>
   <tr>
-    <td>12</td>
-    <td>jumper wires TOTAL</td>
-    <td>25 male to female</td>
+    <td>Computer</td>
+    <td></td>
+    <td>---------------------------------------------</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>jumper wires</td>
+    <td>25</td>
+    <td>male to female</td>
+    <td>$7.75</td>
+    <td>ZW-MF-20</td>
+  </tr>
+  <tr>
+    <td><strong>TOTAL</strong></td>
+    <td></td>
+    <td></td>
+    <td><strong>$77.48</strong></td>
+    <td></td>
   </tr>
 </table>
 
-<!-- PageBreak -->
-
-<p>Estimated Cost(CADSupplier/Part Number</p>
-
-<p>$22.00 A000073<br>
-$5.00 DHT11<br>
-$0.16 CF1/4CT52R221J<br>
-$0.24 151051RS11000</p>
-
-<p>$15.56 MB-102<br>
-$4.58 PB-0940PW-03Q<br>
-$11.44 LCD DISPLAY 16X2 &amp; BL<br>
-$7.75 ZW-MM-20<br>
-$3.00 PEC11R-4315F-N0012</p>
-
-<p>free<br>
-$7.75 ZW-MF-20<br>
-$77.48</p>
-
-</body>
-</html>
+    
+    </section>
 
 
-  <section id="prototype">
-    <h2>Prototype</h2>
-    <p>The following image shows the assembled prototype on a breadboard.</p>
-    <img src="prototype.jpg" alt="Collision warning system prototype">
-  </section>
+    <section id="prototype">
+      <h2>Prototype</h2>
+      <p>The following image shows the assembled prototype on a breadboard.</p>
+      <img src="prototype.jpg" alt="Collision warning system prototype">
+    </section>
 
-  <section id="code">
-    <h2>Arduino Code</h2>
-    <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance
-      readings from the HC-SR04 sensor.</p>
+    <section id="code">
+      <h2>Arduino Code</h2>
+      <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance
+        readings from the HC-SR04 sensor.</p>
 
-    <pre class="line-numbers">
+      <pre class="line-numbers">
   <button class="copy-btn" onclick="copyCode()">Copy</button>
   <code id="arduinoCode" class="language-cpp">
 // Collision Warning System with Distance Sensor (HC-SR04)
@@ -274,63 +284,63 @@ void loop() {
 }
     </code></pre>
 
-    <script>
-      function copyCode() {
-        const code = document.getElementById('arduinoCode').innerText;
-        navigator.clipboard.writeText(code).then(() => {
-          alert('Code copied to clipboard!');
-        });
-      }
-    </script>
-  </section>
+      <script>
+        function copyCode() {
+          const code = document.getElementById('arduinoCode').innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            alert('Code copied to clipboard!');
+          });
+        }
+      </script>
+    </section>
 
 
 
-  <section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>The system effectively demonstrates distance-based alerting using Arduino. It’s affordable, educational, and
-      sustainable through reusable components.</p>
-  </section>
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>The system effectively demonstrates distance-based alerting using Arduino. It’s affordable, educational, and
+        sustainable through reusable components.</p>
+    </section>
 
- <section id="references">
-  <h2>References</h2>
-<p>
-  The following external resources and example projects demonstrate related Arduino applications 
-  using fire alarms, smoke detection, temperature and humidity monitoring, and buzzers:
-</p>
+    <section id="references">
+      <h2>References</h2>
+      <p>
+        The following external resources and example projects demonstrate related Arduino applications
+        using fire alarms, smoke detection, temperature and humidity monitoring, and buzzers:
+      </p>
 
-<ul>
-  <li>
-    Ayanfeoluwaadekanye1. (2020, Oct 4). 
-    <em>Fire and Smoke Alarm.</em> 
-    Arduino Project Hub. 
-    <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081" target="_blank" rel="noopener noreferrer">
-      https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081
-    </a>
-  </li>
+      <ul>
+        <li>
+          Ayanfeoluwaadekanye1. (2020, Oct 4).
+          <em>Fire and Smoke Alarm.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081" target="_blank"
+            rel="noopener noreferrer">
+            https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081
+          </a>
+        </li>
 
-  <li>
-    Ayanfeoluwaadekanye1. (2020, Aug 27). 
-    <em>Fire Alarm.</em> 
-    Arduino Project Hub. 
-    <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d" target="_blank" rel="noopener noreferrer">
-      https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d
-    </a>
-  </li>
+        <li>
+          Ayanfeoluwaadekanye1. (2020, Aug 27).
+          <em>Fire Alarm.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d" target="_blank"
+            rel="noopener noreferrer">
+            https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d
+          </a>
+        </li>
 
-  <li>
-    Arduino_buzz. (2025, May 9). 
-    <em>Temperature and Humidity Monitor Using DHT11, OLED, RGB LED, and Buzzer.</em> 
-    Arduino Project Hub. 
-    <a href="https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14" target="_blank" rel="noopener noreferrer">
-      https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14
-    </a>
-  </li>
-</ul
-
-</section>
-
-
+        <li>
+          Arduino_buzz. (2025, May 9).
+          <em>Temperature and Humidity Monitor Using DHT11, OLED, RGB LED, and Buzzer.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14"
+            target="_blank" rel="noopener noreferrer">
+            https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14
+          </a>
+        </li>
+      </ul>
+     </section>
 
 </body>
 
