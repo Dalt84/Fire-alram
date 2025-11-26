@@ -51,10 +51,16 @@
   </section>
 
   <section id="introduction">
+
     <h2>Introduction</h2>
-    <p>This project uses an <strong>Arduino Uno</strong>, an <strong>HC-SR04 ultrasonic sensor</strong>, a
-      <strong>passive buzzer</strong>, and <strong>red/yellow/green LEDs</strong> to provide proximity-based
-      alerts, similar to automotive Fire alram.
+<p>This project uses an <strong>Arduino Uno</strong>, a <strong>DHT11 temperature sensor</strong>, a 
+<strong>buzzer</strong>, <strong>RGB LEDs</strong>, and an <strong>LCD screen</strong> to provide fire alerts. 
+When the temperature reaches a preset range, all alarm systems engage simultaneously: the buzzer sounds to 
+alert those who are not hearing impaired, the RGB LEDs flash to visually warn the hearing impaired, and the 
+LCD screen displays the current temperature along with the message <em>Fire! Exit Now</em>. This ensures 
+comprehensive safety by combining auditory and visual signals.</p>
+
+
     </p>
   </section>
 
@@ -62,7 +68,7 @@
     <h2>Circuit Diagram</h2>
     <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
       thresholds.</p>
-    <img src="collision-warning-system-Arduino.jpg" alt="Arduino collision warning system">
+    <img src="circuit-diagram.jpg" alt="Arduino collision warning system">
   </section>
 
   <section id="environment">
@@ -288,66 +294,40 @@ void loop() {
 
  <section id="references">
   <h2>References</h2>
-  <p>
-    The following external resources and example projects demonstrate related Arduino applications 
-    using ultrasonic distance sensors, passive buzzers, and multicolour LEDs:
-  </p>
+<p>
+  The following external resources and example projects demonstrate related Arduino applications 
+  using fire alarms, smoke detection, temperature and humidity monitoring, and buzzers:
+</p>
 
-  <ul>
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Ultrasonic sensor projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor
-      </a>
-    </li>
+<ul>
+  <li>
+    Ayanfeoluwaadekanye1. (2020, Oct 4). 
+    <em>Fire and Smoke Alarm.</em> 
+    Arduino Project Hub. 
+    <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081" target="_blank" rel="noopener noreferrer">
+      https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081
+    </a>
+  </li>
 
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Buzzer projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://create.arduino.cc/projecthub/projects/tags/buzzer" target="_blank" rel="noopener noreferrer">
-        https://create.arduino.cc/projecthub/projects/tags/buzzer
-      </a>
-    </li>
+  <li>
+    Ayanfeoluwaadekanye1. (2020, Aug 27). 
+    <em>Fire Alarm.</em> 
+    Arduino Project Hub. 
+    <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d" target="_blank" rel="noopener noreferrer">
+      https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d
+    </a>
+  </li>
 
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>LED projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/led" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/led
-      </a>
-    </li>
+  <li>
+    Arduino_buzz. (2025, May 9). 
+    <em>Temperature and Humidity Monitor Using DHT11, OLED, RGB LED, and Buzzer.</em> 
+    Arduino Project Hub. 
+    <a href="https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14" target="_blank" rel="noopener noreferrer">
+      https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14
+    </a>
+  </li>
+</ul
 
-    <li>
-      Instructables. (n.d.). 
-      <em>Distance measurement using ultrasonic sensor.</em> 
-      Instructables. 
-      <a href="https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/
-      </a>
-    </li>
-
-    <li>
-      Circuit Basics. (n.d.). 
-      <em>How to use an ultrasonic sensor with Arduino.</em> 
-      Circuit Basics. 
-      <a href="https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/" target="_blank" rel="noopener noreferrer">
-        https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/
-      </a>
-    </li>
-
-    <li>
-      Last Minute Engineers. (n.d.). 
-      <em>Ultrasonic sensor tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/" target="_blank" rel="noopener noreferrer">
-        https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/
-      </a>
-    </li>
-  </ul>
 </section>
 
 
