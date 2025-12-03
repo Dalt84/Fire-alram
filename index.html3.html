@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Alarm</title>
+
+  <!-- Prism.js syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+
+  <!-- Includes the stylesheet file styles.css -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Fixed Navigation Menu -->
+  <nav id="menu">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="#top">Title</a></li>
+      <li><a href="#information">Project Information</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#circuit-diagram">Circuit</a></li>
+      <li><a href="#environment">Environment</a></li>
+      <li><a href="#bom">BoM</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
+
+
+  <h1 id="top">Fire alram</h1>
+
+  <section id="information">
+    <h2>Project Information</h2>
+    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2025)</p>
+
+    <p><strong>Team Members:</strong></p>
+    <ul>
+      <li>Dalton Ragogna</li>
+      <li>Artem Mosentsev</li>
+      <li>Evon Harmer</li>
+      <li>Matthew Olusanya</li>
+    </ul>
+  </section>
+
+  <section id="introduction">
+
+    <h2>Introduction</h2>
+    <p>This project uses an <strong>Arduino Uno</strong>, a <strong>DHT11 temperature sensor</strong>, a
+      <strong>buzzer</strong>, <strong>RGB LEDs</strong>, and an <strong>LCD screen</strong> to provide fire alerts.
+      When the temperature reaches a preset range, all alarm systems engage simultaneously: the buzzer sounds to
+      alert those who are not hearing impaired, the RGB LEDs flash to visually warn the hearing impaired, and the
+      LCD screen displays the current temperature along with the message <em>Fire! Exit Now</em>. This ensures
+      comprehensive safety by combining auditory and visual signals.
+    </p>
+
+
+    </p>
+  </section>
+
+  <section id="circuit-diagram">
+    <h2>Circuit Diagram</h2>
+    <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
+      thresholds.</p>
+    <img src="circuit-diagram.jpg" alt="Arduino collision warning system">
+  </section>
+
+  <section id="environment">
+    <h2>Environmental Impact Assessment</h2>
+    <ul>
+      <li><strong>Materials:</strong> The Arduino Uno is RoHS and WEEE compliant, limiting hazardous substances.
+      </li>
+      <li><strong>Energy Efficiency:</strong> Circuit draw (standby): ~90–100 mA at 5 V (~0.45 W).
+Circuit draw (alarm active): ~150 mA at 5 V (~0.75 W).
+Overall efficiency: Minimal power consumption, suitable for USB supply or small solar panel integration.</li>
+      <li><strong>Reusability:</strong> The fire alarm circuit demonstrates strong environmental responsibility: Low energy demand makes it compatible with sustainable power sources. Reusable modular components reduce long-term waste. Compliance with safety standards ensures minimal hazardous material use. With careful sourcing and efficient operation, the project aligns well with eco-friendly design principles..</li>
+      <li><strong>Packaging & Shipping:</strong> Ordering all components from a single supplier helps minimize
+        carbon footprint.</li>
+    </ul>
+  </section>
+
+  <section id="bom">
+    <h2>Bill of Materials (BoM)</h2>
+
+     
+
+      <table>
+  <tr>
+    <th>Item Description</th>
+    <th>Qty</th>
+    <th>Specification</th>
+    <th>Estimated Cost(CA)</th>
+    <th>Supplier/Part Number</th>
+  </tr>
+  <tr>
+    <td>Arduino Uno compatible with</td>
+    <td>1</td>
+    <td>5v microcontroller board</td>
+    <td>$22.00</td>
+    <td><a href = "https://www.amazon.ca/Elegoo-Board-ATmega328P-ATMEGA16U2-Arduino/dp/B01EWOE0UU/ref=sr_1_3_sspa">A000073</href></td>
+  </tr>
+  <tr>
+    <td>Temperature & Humidity Sens</td>
+    <td>1</td>
+    <td>Digital temp/humidity sensor, 3-5v</td>
+    <td>$5.00</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/dfrobot/DFR0067/6588511">DHT11</href></td>
+  </tr>
+  <tr>
+    <td>Resistor for LED</td>
+    <td>1</td>
+    <td>220 or 330 ohm</td>
+    <td>$0.16</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/koa-speer-electronics-inc/CF1-4CT52R221J/13538392">CF1/4CT52R221J</href></td>
+  </tr>
+  <tr>
+    <td>LED RED</td>
+    <td>1-2</td>
+    <td>5 mm LED - 2v forward drop</td>
+    <td>$0.24</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/w-rth-elektronik/151051RS11000/4490012">151051RS11000</href></td>
+  </tr>
+  <tr>
+    <td>Breadboard</td>
+    <td>1</td>
+    <td>400 tiepoints</td>
+    <td>$15.56</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/sunfounder/CN0241/18668614">CN0241</href></td>
+  </tr>
+  <tr>
+    <td>Buzzers</td>
+    <td>2</td>
+    <td>Small 5v piezo buzzers</td>
+    <td>$4.58</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/mallory-sonalert-products-inc/PB-0940PW-03Q/21823203">PB-0940PW-03Q</href></td>
+  </tr>
+  <tr>
+    <td>lcd display</td>
+    <td>1</td>
+    <td>5v LCD, I2C module</td>
+    <td>$11.44</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/olimex-ltd/LCD-DISPLAY-16X2---BL/21662361">LCD DISPLAY 16X2 & BL</href></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>8</td>
+    <td>20 male to male</td>
+    <td>$7.75</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/busboard-prototype-systems/ZW-MM-20/19200346">ZW-MM-20</href></td>
+  </tr>
+  <tr>
+    <td>potentiometer</td>
+    <td>1</td>
+    <td>10k ohm linear pot</td>
+    <td>$3.00</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/kyocera-avx/601030/10491403?gclsrc=aw.ds&gad_source=1&gad_campaignid=23158240004&gclid=CjwKCAiA3L_JBhAlEiwAlcWO5zxXAeVZWjBSLbxKTeNYM5XA4RPTUYXFoMWa93x3RAQu-yUj4uAe9xoCLr0QAvD_BwE">601030</href></td>
+  </tr>
+  <tr>
+    <td>Plastick box</td>
+    <td>1</td>
+    <td>---------------------------------------------</td>
+    <td>free</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Computer</td>
+    <td></td>
+    <td>---------------------------------------------</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>jumper wires</td>
+    <td>25</td>
+    <td>male to female</td>
+    <td>$7.75</td>
+    <td><a href = "https://www.digikey.ca/en/products/detail/busboard-prototype-systems/ZW-MF-20/19200365">ZW-MF-20</href></td>
+  </tr>
+  <tr>
+    <td><strong>TOTAL</strong></td>
+    <td></td>
+    <td></td>
+    <td><strong>$77.48</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+    
+    </section>
+
+
+    <section id="prototype">
+      <h2>Prototype</h2>
+      <p>The following image shows the assembled prototype on a breadboard.</p>
+      <img src="prototype.jpg" alt="Collision warning system prototype">
+    </section>
+
+    <section id="code">
+      <h2>Arduino Code</h2>
+      <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance
+        readings from the HC-SR04 sensor.</p>
+
+      <pre class="line-numbers">
+  <button class="copy-btn" onclick="copyCode()">Copy</button>
+  <code id="arduinoCode" class="language-cpp">
+// Collision Warning System with Distance Sensor (HC-SR04)
+// Author: Ana Rodrigues
+// Oct 2, 2025
+// Object is farther than 50cm: Green LED lights up
+// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone
+// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone
+
+//LED pins
+const int greenLED = 2;
+const int yellowLED = 3;
+const int redLED = 4;
+
+// Ultrasonic sensor pins
+const int trigPin = 9;
+const int echoPin = 10;
+
+// Passive buzzer pin
+const int buzzer = 11;
+
+void setup() {
+  pinMode(greenLED, OUTPUT);
+  pinMode(yellowLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Measure distance
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH);
+  long distance = duration * 0.034 / 2;
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  
+  //Error in measurement:
+  if (distance <= 0)
+    return;
+
+  //Too close:
+  if (distance <= 10) {
+    digitalWrite(greenLED, LOW);
+    digitalWrite(yellowLED, LOW);
+    digitalWrite(redLED, HIGH);
+    tone(buzzer, 500); // Play 500Hz tone
+    return;
+  }
+
+  //Midrange:
+  if (distance <= 30) {
+    digitalWrite(greenLED, LOW);
+    digitalWrite(yellowLED, HIGH);
+    digitalWrite(redLED, LOW);
+    tone(buzzer, 300); // Play 300Hz tone
+    return;
+  }
+
+  //Normal status:
+  digitalWrite(greenLED, HIGH);
+  digitalWrite(yellowLED, LOW);
+  digitalWrite(redLED, LOW);
+  noTone(buzzer); // stop buzzer
+
+  delay(100);
+}
+    </code></pre>
+
+      <script>
+        function copyCode() {
+          const code = document.getElementById('arduinoCode').innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            alert('Code copied to clipboard!');
+          });
+        }
+      </script>
+    </section>
+
+
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>The fire alarm circuit project demonstrates a balanced approach to safety and sustainability. By utilizing RoHS- and WEEE-compliant components, the design minimizes hazardous material use. Its low energy demand—less than 1 W even under alarm conditions—makes it suitable for efficient power sources such as USB or solar. The modular nature of the system ensures components can be reused, extending their lifecycle and reducing electronic waste. With thoughtful sourcing and consolidated shipping, the project further reduces its carbon footprint. Overall, the fire alarm circuit provides essential safety functionality while aligning with environmentally responsible practices, making it a model for small-scale, eco-conscious electronic design.</p>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <p>
+        The following external resources and example projects demonstrate related Arduino applications
+        using fire alarms, smoke detection, temperature and humidity monitoring, and buzzers:
+      </p>
+
+      <ul>
+        <li>
+          Ayanfeoluwaadekanye1. (2020, Oct 4).
+          <em>Fire and Smoke Alarm.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081" target="_blank"
+            rel="noopener noreferrer">
+            https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-and-smoke-alarm-e4d081
+          </a>
+        </li>
+
+        <li>
+          Ayanfeoluwaadekanye1. (2020, Aug 27).
+          <em>Fire Alarm.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d" target="_blank"
+            rel="noopener noreferrer">
+            https://projecthub.arduino.cc/ayanfeoluwaadekanye1/fire-alarm-f3a79d
+          </a>
+        </li>
+
+        <li>
+          Arduino_buzz. (2025, May 9).
+          <em>Temperature and Humidity Monitor Using DHT11, OLED, RGB LED, and Buzzer.</em>
+          Arduino Project Hub.
+          <a href="https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14"
+            target="_blank" rel="noopener noreferrer">
+            https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14
+          </a>
+        </li>
+      </ul>
+     </section>
+
+</body>
+
+</html>
